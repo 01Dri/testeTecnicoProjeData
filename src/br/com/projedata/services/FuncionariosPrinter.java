@@ -103,6 +103,7 @@ public class FuncionariosPrinter {
     public void  agruparFuncionariosPorFunções() {
         var agrupados =  funcionarios.stream()
                 .collect(Collectors.groupingBy(Funcionario::getFuncao));
+        System.out.println("FUNCIONÁRIOS AGRUPADOS POR FUNÇÕES: ");
         for (var valores : agrupados.entrySet()) {
             System.out.println("");
             System.out.println("FUNÇAO: " + valores.getKey());

@@ -22,7 +22,6 @@ public class Principal {
         funcionarioServices.aumentarSalarioFuncionariosPorPorcentagem(BigDecimal.valueOf(10)); // 10 %
         System.out.println("FUNCIONÁRIOS APÓS REAJUSTE DO SALÁRIO: \n");
         funcionariosPrinter.exibirFuncionarios();
-        System.out.println("FUNCIONÁRIOS AGRUPADOS POR FUNÇÕES: ");
         funcionariosPrinter.agruparFuncionariosPorFunções();
         System.out.println("");
         funcionariosPrinter.exibirAniversariantes();
