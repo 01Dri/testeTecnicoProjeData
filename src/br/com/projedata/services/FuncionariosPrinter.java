@@ -12,6 +12,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class FuncionariosPrinter {
 
@@ -97,6 +98,17 @@ public class FuncionariosPrinter {
             System.out.println("Funcionário: " + funcionario.getNome());
             System.out.println("Quantidade de salários minimos: " + funcionario.getSalario().divide(SALÁRIO_MINIMO, 0, RoundingMode.HALF_UP));
         });
+    }
+
+    public void  agruparFuncionariosPorFunções() {
+        var agrupados =  funcionarios.stream()
+                .collect(Collectors.groupingBy(Funcionario::getFuncao));
+        for (var valores : agrupados.entrySet()) {
+            System.out.println("");
+            System.out.println("FUNÇAO: " + valores.getKey());
+            System.out.println("QUANTIDADE: " + valores.getValue().size());
+            System.out.println("FUNCIONÁRIOS: " + valores.getValue());
+        }
     }
 
 

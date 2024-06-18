@@ -23,7 +23,7 @@ public class Principal {
         System.out.println("FUNCIONÁRIOS APÓS REAJUSTE DO SALÁRIO: \n");
         funcionariosPrinter.exibirFuncionarios();
         System.out.println("FUNCIONÁRIOS AGRUPADOS POR FUNÇÕES: ");
-        funcionarioServices.agruparFuncionariosPorFunções();
+        funcionariosPrinter.agruparFuncionariosPorFunções();
         System.out.println("");
         funcionariosPrinter.exibirAniversariantes();
         System.out.println("");

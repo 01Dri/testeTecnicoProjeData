@@ -25,15 +25,4 @@ public class FuncionarioServices {
             funcionario.setSalario(novoSalario);
         });
     }
-
-    public void  agruparFuncionariosPorFunções() {
-        var agrupados =  funcionarios.stream()
-                .collect(Collectors.groupingBy(Funcionario::getFuncao));
-        for (var valores : agrupados.entrySet()) {
-            System.out.println("");
-            System.out.println("FUNÇAO: " + valores.getKey());
-            System.out.println("QUANTIDADE: " + valores.getValue().size());
-            System.out.println("FUNCIONÁRIOS: " + valores.getValue());
-        }
-    }
 }
